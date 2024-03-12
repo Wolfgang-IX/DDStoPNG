@@ -39,4 +39,8 @@ if __name__ == "__main__":
     input_directory = os.path.join(script_dir, input_directory)
     output_directory = os.path.join(script_dir, output_directory)
 
+    # Ensure input and output directories exist
+    os.makedirs(input_directory, exist_ok=True)
+    os.makedirs(output_directory, exist_ok=True)
+
     convert_dds_to_png(input_directory, output_directory)
